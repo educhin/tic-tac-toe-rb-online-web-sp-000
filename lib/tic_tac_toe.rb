@@ -130,7 +130,7 @@ def endgame(board)
   end
 end
 
-Define your play method below
+#Define your play method below
 def play(board)
   until over?(board)
     turn(board)
