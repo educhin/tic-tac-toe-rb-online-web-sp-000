@@ -135,21 +135,13 @@ def play(board)
   until over?(board)
     turn(board)
     if winner(board) == "X"
-      puts "Congratulations X!"
+      return "Congratulations X!"
     elsif winner(board) == "O"
-      puts "Congratulations O!"
+      return "Congratulations O!"
     elsif draw?(board)
-      puts "Cat's Game!"
+      return "Cat's Game!"
     else
       play(board)
     end
   end
-  if over?(board)
-    if winner(board) == "X"
-      puts "Congratulations X!"
-    elsif winner(board) == "O"
-      puts "Congratulations O!"
-    else
-      puts "Cat's Game!"
-    end
 end
