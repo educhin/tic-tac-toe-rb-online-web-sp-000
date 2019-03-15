@@ -140,8 +140,6 @@ def play(board)
       puts "Congratulations O!"
     elsif draw?(board)
       puts "Cat's Game!"
-    else
-      play(board)
     end
   end
 end
