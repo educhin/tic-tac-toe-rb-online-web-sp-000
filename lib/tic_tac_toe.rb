@@ -118,6 +118,18 @@ def winner(board)
   end
 end
 
+def endgame(board)
+  if winner(board) == "X"
+    puts "Congratulations X!"
+  elsif winner(board) == "O"
+    puts "Congratulations O!"
+  elsif draw?(board)
+    puts "Cat's Game!"
+  else
+    nil
+  end
+end
+
 # Define your play method below
 def play(board)
   until over?(board)
