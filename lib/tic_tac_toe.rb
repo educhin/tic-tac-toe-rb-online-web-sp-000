@@ -30,15 +30,7 @@ def turn(board)
   current_player = current_player(board)
   if valid_move?(board, index)
     move(board, index, current_player)
-    if winner(board) == "X"
-      puts "Congratulations X!"
-    elsif winner(board) == "O"
-      puts "Congratulations O!"
-    elsif draw?(board)
-      puts "Cat's Game!"
-    else
-     display_board(board)
-    end
+    display_board(board)
   else
     turn(board)
   end
@@ -142,14 +134,14 @@ end
 def play(board)
   until over?(board)
     turn(board)
-    # if winner(board) == "X"
-    #   puts "Congratulations X!"
-    # elsif winner(board) == "O"
-    #   puts "Congratulations O!"
-    # elsif draw?(board)
-    #   puts "Cat's Game!"
-    # else
-    #   play(board)
-    # end
+    if winner(board) == "X"
+      puts "Congratulations X!"
+    elsif winner(board) == "O"
+      puts "Congratulations O!"
+    elsif draw?(board)
+      puts "Cat's Game!"
+    else
+      play(board)
+    end
   end
 end
