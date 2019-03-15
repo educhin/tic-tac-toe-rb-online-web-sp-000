@@ -130,41 +130,6 @@ def endgame(board)
   end
 end
 
-#Define your play method below
-# def play(board)
-#   until over?(board)
-#     turn(board)
-#     if winner(board) == "X"
-#       puts "Congratulations X!"
-#     elsif winner(board) == "O"
-#       puts "Congratulations O!"
-#     elsif draw?(board)
-#       puts "Cat's Game!"
-#     end
-#   end
-# end
-
-# def play(board)
-#   if winner(board) == "X"
-#     puts "Congratulations X!"
-#   elsif winner(board) == "O"
-#     puts "Congratulations O!"
-#   elsif draw?(board)
-#     puts "Cat's Game!"
-#   else
-#     until over?(board)
-#       turn(board)
-#       if winner(board) == "X"
-#         puts "Congratulations X!"
-#       elsif winner(board) == "O"
-#         puts "Congratulations O!"
-#       elsif draw?(board)
-#         puts "Cat's Game!"
-#       end
-#     end
-#   end
-# end
-
 def play(board)
    until over?(board)
       turn(board)
