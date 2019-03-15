@@ -144,23 +144,35 @@ end
 #   end
 # end
 
+# def play(board)
+#   if winner(board) == "X"
+#     puts "Congratulations X!"
+#   elsif winner(board) == "O"
+#     puts "Congratulations O!"
+#   elsif draw?(board)
+#     puts "Cat's Game!"
+#   else
+#     until over?(board)
+#       turn(board)
+#       if winner(board) == "X"
+#         puts "Congratulations X!"
+#       elsif winner(board) == "O"
+#         puts "Congratulations O!"
+#       elsif draw?(board)
+#         puts "Cat's Game!"
+#       end
+#     end
+#   end
+# end
+
 def play(board)
-  if winner(board) == "X"
-    puts "Congratulations X!"
-  elsif winner(board) == "O"
-    puts "Congratulations O!"
-  elsif draw?(board)
-    puts "Cat's Game!"
-  else
-    until over?(board)
+   until over?(board) 
       turn(board)
-      if winner(board) == "X"
-        puts "Congratulations X!"
-      elsif winner(board) == "O"
-        puts "Congratulations O!"
-      elsif draw?(board)
-        puts "Cat's Game!"
-      end
-    end
-  end
+   end 
+   if won?(board)
+      winner(board) == "X" || winner(board) == "O" 
+      puts "Congratulations #{winner(board)}!" 
+   elsif draw?(board)
+      puts "Cats Game!" 
+   end 
 end
