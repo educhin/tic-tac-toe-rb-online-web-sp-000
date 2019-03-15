@@ -132,4 +132,12 @@ def play(board)
       play(board)
     end
   end
+  if over?(board)
+    if winner(board) == "X"
+      puts "Congratulations X!"
+    elsif winner(board) == "O"
+      puts "Congratulations O!"
+    else 
+      puts "Cat's Game!"
+    end
 end
